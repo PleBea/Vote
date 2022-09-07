@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teamlog</title>
+    <style>
+        .index {
+            width: 100%;
+            height: 100vh;
+        }
+        
+        .index_wrapper {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+        }
+
+        .index h1 {
+            font-size: 48px;
+            font-weight: 800;
+            text-align: center;
+        }
+
+        .vote_wrapper {
+            display: flex;
+            gap: 10px;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .vote {
+            background-color: white;
+            border: solid 2px #333333;
+            border-radius: 10px;
+            transition: 0.5s;
+            width: 400px;
+            height: 700px;
+            font-size: 38px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .vote a {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            color: black;
+            text-decoration: none;
+        }
+
+        .vote:hover {
+            background-color: #333333;
+        }
+
+        .vote:hover a {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="index">
+        <div class="index_wrapper">
+            <h1>투표해주세요</h1>
+            <div class="vote_wrapper">
+                <div onclick="location.href = '/vote/0'" class="vote">
+                    <a>왼쪽</a>
+                </div>
+                <div onclick="location.href = '/vote/1'" class="vote">
+                    <a>오른쪽</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    alert('감사합니다.');
+</script>
+</html>
